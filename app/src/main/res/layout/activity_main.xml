@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#FF000000">
-
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#FF000000">
     <androidx.camera.view.PreviewView android:id="@+id/previewView" android:layout_width="match_parent" android:layout_height="match_parent"/>
-
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="18dp" android:background="#25000000">
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HYPERCAM LIQUID GLASS" android:textColor="#FFFFFF" android:textSize="13sp" android:letterSpacing="0.15" android:fontFamily="monospace" android:textStyle="bold"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LEICA • VARIO-SUMMILUX • iOS26 STYLE" android:textColor="#B0FFFFFF" android:textSize="9sp" android:letterSpacing="0.08" android:layout_marginTop="2dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp" android:background="#25000000">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="HYPERCAM ULTIMATE • V8" android:textColor="#FFFFFF" android:textSize="11sp" android:fontFamily="monospace" android:textStyle="bold"/>
+            <TextView android:id="@+id/txtOisStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OIS ON" android:textColor="#FFEB3B" android:background="@drawable/glass_button" android:padding="6dp"/>
+            <TextView android:id="@+id/txtLensStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1X WIDE" android:textColor="#80C8FF" android:background="@drawable/glass_button" android:padding="6dp" android:layout_marginStart="6dp"/>
         </LinearLayout>
-        <TextView android:id="@+id/txtOisStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OIS ON" android:textColor="#FFEB3B" android:textSize="11sp" android:background="@drawable/glass_button" android:padding="8dp" android:fontFamily="monospace"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="10dp">
+            <Button android:id="@+id/btnLensUltra" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="0.6X UW" android:textSize="8sp" android:background="@drawable/lens_button" android:textColor="#FFFFFF" android:layout_marginEnd="3dp"/>
+            <Button android:id="@+id/btnLensWide" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="1X 200MP" android:textSize="8sp" android:background="@drawable/glass_button_active" android:textColor="#000000" android:layout_marginEnd="3dp"/>
+            <Button android:id="@+id/btnLensTele" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="2X TELE" android:textSize="8sp" android:background="@drawable/lens_button" android:textColor="#FFFFFF" android:layout_marginEnd="3dp"/>
+            <Button android:id="@+id/btnLensPeri" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="5X PERI" android:textSize="8sp" android:background="@drawable/lens_button" android:textColor="#FFFFFF" android:layout_marginEnd="3dp"/>
+            <Button android:id="@+id/btnLensMacro" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="MACRO" android:textSize="8sp" android:background="@drawable/lens_button" android:textColor="#FFFFFF"/>
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:orientation="vertical" android:padding="20dp">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/glass_background" android:padding="18dp">
-            <TextView android:id="@+id/txtFilterName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="LEICA VIVID • LIQUID GLASS" android:textColor="#FFFFFF" android:textSize="13sp" android:gravity="center" android:letterSpacing="0.2" android:fontFamily="monospace" android:textStyle="bold"/>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="18dp">
-                <Button android:id="@+id/btnLeica" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:text="LEICA" android:textColor="#FFFFFF" android:textSize="12sp" android:background="@drawable/glass_button" android:letterSpacing="0.1"/>
-                <Button android:id="@+id/btnCapture" android:layout_width="74dp" android:layout_height="74dp" android:background="@drawable/capture_button_glass" android:layout_marginHorizontal="12dp" android:elevation="10dp"/>
-                <Button android:id="@+id/btnOis" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:text="OIS ON" android:textColor="#FFEB3B" android:textSize="12sp" android:background="@drawable/glass_button"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:orientation="vertical" android:padding="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="6dp">
+            <Button android:id="@+id/btnSkinTone" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="SKIN: ON" android:textSize="8sp" android:background="@drawable/glass_button" android:textColor="#FFB0A0" android:layout_marginEnd="3dp"/>
+            <Button android:id="@+id/btnNature" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="NATURE: ON" android:textSize="8sp" android:background="@drawable/glass_button" android:textColor="#90FF90" android:layout_marginEnd="3dp"/>
+            <Button android:id="@+id/btnNightMode" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="NIGHT: AUTO" android:textSize="8sp" android:background="@drawable/glass_button" android:textColor="#80C8FF" android:layout_marginEnd="3dp"/>
+            <Button android:id="@+id/btnTripod" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="TRIPOD: OFF" android:textSize="8sp" android:background="@drawable/glass_button" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/glass_background" android:padding="14dp">
+            <TextView android:id="@+id/txtFilterName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="LEICA VIVID • SKIN NATURAL • NATURE BOOST" android:textColor="#FFFFFF" android:textSize="10sp" android:gravity="center" android:fontFamily="monospace"/>
+            <TextView android:id="@+id/txtModeStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DAY MODE • HDR ON • 200MP READY • ليلي/نهاري" android:textColor="#B0FFFFFF" android:textSize="7sp" android:gravity="center" android:layout_marginTop="3dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="12dp">
+                <Button android:id="@+id/btnLeica" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:text="LEICA" android:background="@drawable/glass_button" android:textColor="#FFFFFF" android:textSize="10sp"/>
+                <Button android:id="@+id/btnCapture" android:layout_width="68dp" android:layout_height="68dp" android:background="@drawable/capture_button_glass" android:layout_marginHorizontal="8dp"/>
+                <Button android:id="@+id/btnOis" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:text="OIS ON" android:background="@drawable/glass_button" android:textColor="#FFEB3B" android:textSize="10sp"/>
             </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="14dp">
-                <Button android:id="@+id/btnWatermark" android:layout_width="wrap_content" android:layout_height="38dp" android:text="LEICA WATERMARK: ON" android:textColor="#FFFFFF" android:textSize="10sp" android:background="@drawable/glass_button" android:paddingHorizontal="14dp"/>
-                <Button android:id="@+id/btnGlassMode" android:layout_width="wrap_content" android:layout_height="38dp" android:text="GLASS: ON" android:textColor="#80C8FF" android:textSize="10sp" android:background="@drawable/glass_button" android:layout_marginStart="8dp" android:paddingHorizontal="14dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="8dp">
+                <Button android:id="@+id/btnWatermark" android:layout_width="wrap_content" android:layout_height="32dp" android:text="WM: ON" android:background="@drawable/glass_button" android:textSize="8sp"/>
+                <Button android:id="@+id/btnHdr" android:layout_width="wrap_content" android:layout_height="32dp" android:text="HDR: ON" android:background="@drawable/glass_button" android:textSize="8sp" android:layout_marginStart="4dp"/>
+                <Button android:id="@+id/btn200MP" android:layout_width="wrap_content" android:layout_height="32dp" android:text="200MP: ON" android:background="@drawable/glass_button_active" android:textSize="8sp" android:layout_marginStart="4dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
