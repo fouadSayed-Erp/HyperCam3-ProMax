@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FF000000">
+
+    <androidx.camera.view.PreviewView android:id="@+id/previewView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="18dp" android:background="#25000000">
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HYPERCAM LIQUID GLASS" android:textColor="#FFFFFF" android:textSize="13sp" android:letterSpacing="0.15" android:fontFamily="monospace" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LEICA • VARIO-SUMMILUX • iOS26 STYLE" android:textColor="#B0FFFFFF" android:textSize="9sp" android:letterSpacing="0.08" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <TextView android:id="@+id/txtOisStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OIS ON" android:textColor="#FFEB3B" android:textSize="11sp" android:background="@drawable/glass_button" android:padding="8dp" android:fontFamily="monospace"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/glass_background" android:padding="18dp">
+            <TextView android:id="@+id/txtFilterName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="LEICA VIVID • LIQUID GLASS" android:textColor="#FFFFFF" android:textSize="13sp" android:gravity="center" android:letterSpacing="0.2" android:fontFamily="monospace" android:textStyle="bold"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="18dp">
+                <Button android:id="@+id/btnLeica" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:text="LEICA" android:textColor="#FFFFFF" android:textSize="12sp" android:background="@drawable/glass_button" android:letterSpacing="0.1"/>
+                <Button android:id="@+id/btnCapture" android:layout_width="74dp" android:layout_height="74dp" android:background="@drawable/capture_button_glass" android:layout_marginHorizontal="12dp" android:elevation="10dp"/>
+                <Button android:id="@+id/btnOis" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:text="OIS ON" android:textColor="#FFEB3B" android:textSize="12sp" android:background="@drawable/glass_button"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="14dp">
+                <Button android:id="@+id/btnWatermark" android:layout_width="wrap_content" android:layout_height="38dp" android:text="LEICA WATERMARK: ON" android:textColor="#FFFFFF" android:textSize="10sp" android:background="@drawable/glass_button" android:paddingHorizontal="14dp"/>
+                <Button android:id="@+id/btnGlassMode" android:layout_width="wrap_content" android:layout_height="38dp" android:text="GLASS: ON" android:textColor="#80C8FF" android:textSize="10sp" android:background="@drawable/glass_button" android:layout_marginStart="8dp" android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
